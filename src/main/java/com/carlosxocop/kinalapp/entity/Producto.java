@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="Productos")
-public class Productos {
+public class Producto{
     @Id
     @Column (name="codigo_producto")
     private String codigo_producto;
@@ -20,10 +20,10 @@ public class Productos {
     @Column
     private int estado;
 
-    public Productos() {
+    public Producto() {
     }
 
-    public Productos(String codigo_producto, String nombre_producto, double precio, int stock, int estado) {
+    public Producto(String codigo_producto, String nombre_producto, double precio, int stock, int estado) {
         this.codigo_producto = codigo_producto;
         this.nombre_producto = nombre_producto;
         this.precio = precio;
