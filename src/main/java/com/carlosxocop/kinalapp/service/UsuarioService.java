@@ -41,13 +41,12 @@ public class UsuarioService implements IUsuarioService{
     @Override
     public Usuario actualizar(String codigo, Usuario usuario) {
         if (!usuarioRepository.existsById(codigo)) {
-            throw new RuntimeException("Usuario no encontrado con codigo "+ codigo );
-
+            throw new RuntimeException("Usuario no encontrado con codigo " + codigo);
+        }
             usuario.setCodigo_usuario(codigo);
             validarUsuario(usuario);
 
             return usuarioRepository.save(usuario);
-        }
     }
 
     @Override
